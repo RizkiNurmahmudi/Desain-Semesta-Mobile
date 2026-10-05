@@ -1,0 +1,6 @@
+{
+  "name": "Semesta",
+  "description": "Aplikasi belajar fisika dan matematika keluarga Indonesia — dari nol sampai ahli, dalam satu tempat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
