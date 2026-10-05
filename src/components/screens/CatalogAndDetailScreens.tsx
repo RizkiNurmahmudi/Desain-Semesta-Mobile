@@ -17,6 +17,7 @@ import {
   Pencil,
   Check,
   Bookmark,
+  Flame,
 } from 'lucide-react';
 import { ConceptItem, FamilyProfile, ScreenId } from '../../types';
 import { CONCEPTS_LIST, LEVEL_DESCRIPTIONS } from '../../data/semestaData';
@@ -161,7 +162,7 @@ export const HomeCatalogScreen: React.FC<HomeCatalogScreenProps> = ({
             onClick={() => onNavigate('progress')}
             className="min-h-[40px] px-3 py-1.5 rounded-2xl bg-[#FFC53D]/25 border border-[#FFC53D] text-[#1E293B] font-extrabold text-xs flex items-center gap-1.5 shadow-2xs active:scale-95 transition-transform cursor-pointer tabular-nums"
           >
-            <span>🔥 {activeProfile.streakDays} hari</span>
+            <span className="flex items-center gap-1.5"><Flame className="w-3.5 h-3.5 text-amber-500 fill-amber-400" /> {activeProfile.streakDays} hari</span>
           </button>
         </div>
 

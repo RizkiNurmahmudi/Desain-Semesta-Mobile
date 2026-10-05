@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { ArrowRight, Plus, Sparkles, Check, X } from 'lucide-react';
+import { ArrowRight, Plus, Sparkles, Check, X, Flame } from 'lucide-react';
 import { FamilyProfile, UIMode } from '../../types';
 import { SemestaAtomLogo, ProfileAvatar } from '../Illustrations';
+import AnimatedSplashBackground from '../AnimatedSplashBackground';
 
 interface SplashScreenProps {
   onStart: () => void;
@@ -16,28 +17,8 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onStart }) => {
           'linear-gradient(180deg, #CBEBFC 0%, #89CFF0 42%, #DFF3FD 78%, #F4FAFE 100%)',
       }}
     >
-      {/* Decorative flat-vector storybook clouds and stars */}
-      <svg
-        className="absolute top-6 left-0 w-full h-44 pointer-events-none opacity-85"
-        viewBox="0 0 360 160"
-        fill="none"
-      >
-        <circle cx="48" cy="36" r="5" fill="#FFC53D" />
-        <circle cx="312" cy="28" r="6" fill="#FFC53D" />
-        <circle cx="280" cy="84" r="4" fill="#FFFFFF" />
-        {/* Soft cloud left */}
-        <g fill="#FFFFFF" fillOpacity="0.75">
-          <rect x="16" y="68" width="76" height="22" rx="11" />
-          <circle cx="38" cy="66" r="14" />
-          <circle cx="62" cy="64" r="16" />
-        </g>
-        {/* Soft cloud right */}
-        <g fill="#FFFFFF" fillOpacity="0.75">
-          <rect x="255" y="42" width="84" height="24" rx="12" />
-          <circle cx="280" cy="40" r="15" />
-          <circle cx="308" cy="38" r="17" />
-        </g>
-      </svg>
+      {/* Latar animasi: awan melayang, orb baby-blue, bintang berkelip */}
+      <AnimatedSplashBackground />
 
       {/* Top subtle family tag */}
       <div className="relative z-10 flex items-center justify-center pt-2">
@@ -187,7 +168,7 @@ export const ProfilePickerScreen: React.FC<ProfilePickerScreenProps> = ({
                 <div className="mt-2.5 pt-2 border-t border-slate-100 w-full flex items-center justify-center gap-1.5 text-[11px] font-semibold text-[#1E6FB8] tabular-nums">
                   <span>{profile.level}</span>
                   <span aria-hidden="true">·</span>
-                  <span className="text-amber-600">🔥 {profile.streakDays} hr</span>
+                  <span className="text-amber-600 flex items-center gap-1"><Flame className="w-3 h-3 fill-amber-400" /> {profile.streakDays} hr</span>
                 </div>
               </button>
             );

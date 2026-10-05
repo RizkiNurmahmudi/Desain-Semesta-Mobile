@@ -207,7 +207,6 @@ export const ProfileAvatar: React.FC<{
           <path d="M18 73C20 59 29 55 40 55C51 55 60 59 62 73" fill="#1E293B" />
           <path d="M33 55L40 67L47 55" fill="#FFC53D" />
           {/* Face */}
-          <circle cx="40" cy="39" r="15.5" fill="#EWB98E" />
           <circle cx="40" cy="39" r="15.5" fill="#F0BE95" />
           {/* Hair */}
           <path

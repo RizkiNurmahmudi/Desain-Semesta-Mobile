@@ -6,6 +6,8 @@ import {
   ChevronRight,
   Sparkles,
   CheckCircle2,
+  Flame,
+  BatteryFull,
 } from 'lucide-react';
 import { ConceptItem, FamilyProfile, ScreenId, UIMode } from './types';
 import {
@@ -367,7 +369,7 @@ export default function App() {
               <div className="hidden sm:flex items-center justify-between px-5 py-1.5 bg-[#1E6FB8] text-white rounded-t-[30px] text-[11px] font-bold tabular-nums">
                 <span>09:41</span>
                 <div className="w-16 h-3 bg-slate-950/35 rounded-full" />
-                <span>100% 🔋</span>
+                <span className="flex items-center gap-1">100% <BatteryFull className="w-3.5 h-3.5" /></span>
               </div>
 
               {/* 360px Inner Mobile Screen Container */}
@@ -458,8 +460,8 @@ export default function App() {
                         <div className="text-xs font-extrabold truncate">
                           {prof.name}
                         </div>
-                        <div className="text-[10px] text-slate-500 truncate">
-                          🔥 {prof.streakDays} hari
+                        <div className="text-[10px] text-slate-500 truncate flex items-center gap-1">
+                          <Flame className="w-3 h-3 text-amber-500 fill-amber-400" /> {prof.streakDays} hari
                         </div>
                       </div>
                     </button>

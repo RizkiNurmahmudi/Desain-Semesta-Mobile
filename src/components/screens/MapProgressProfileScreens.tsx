@@ -13,6 +13,8 @@ import {
   ArrowRight,
   Users,
   Check,
+  Flame,
+  Star,
 } from 'lucide-react';
 import { FamilyProfile, ScreenId, SkillNode, UIMode } from '../../types';
 import {
@@ -360,15 +362,15 @@ export const ProgressDashboardScreen: React.FC<ProgressDashboardScreenProps> = (
                 : 'bg-white border-[#FFC53D] shadow-2xs'
             }`}
           >
-            <div className="w-11 h-11 rounded-2xl bg-[#FFC53D]/30 flex items-center justify-center text-xl shrink-0">
-              🔥
+            <div className="w-11 h-11 rounded-2xl bg-[#FFC53D]/30 flex items-center justify-center shrink-0">
+              <Flame className="w-5 h-5 text-amber-600 fill-amber-400" />
             </div>
             <div>
               <span className="text-[11px] font-bold text-slate-500 block">
                 Rentetan Belajar
               </span>
-              <span className="text-lg font-extrabold tabular-nums">
-                🔥 12 hari
+              <span className="text-lg font-extrabold tabular-nums flex items-center gap-1.5">
+                <Flame className="w-5 h-5 text-amber-500 fill-amber-400" /> 12 hari
               </span>
             </div>
           </div>
@@ -380,15 +382,15 @@ export const ProgressDashboardScreen: React.FC<ProgressDashboardScreenProps> = (
                 : 'bg-white border-[#89CFF0] shadow-2xs'
             }`}
           >
-            <div className="w-11 h-11 rounded-2xl bg-[#89CFF0]/30 flex items-center justify-center text-xl shrink-0">
-              ⭐
+            <div className="w-11 h-11 rounded-2xl bg-[#89CFF0]/30 flex items-center justify-center shrink-0">
+              <Star className="w-5 h-5 text-[#1E6FB8] fill-[#FFC53D]" />
             </div>
             <div>
               <span className="text-[11px] font-bold text-slate-500 block">
                 Total Pengalaman
               </span>
-              <span className="text-lg font-extrabold text-[#1E6FB8] tabular-nums">
-                ⭐ 1.240 XP
+              <span className="text-lg font-extrabold text-[#1E6FB8] tabular-nums flex items-center gap-1.5">
+                <Star className="w-5 h-5 text-[#1E6FB8] fill-[#FFC53D]" /> 1.240 XP
               </span>
             </div>
           </div>
